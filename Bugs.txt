@@ -1,0 +1,7 @@
+1. Installed manually following instructions at http://docs.django-cms.org/en/latest/how_to/install.html.
+
+2. Welcome to django CMS Create. 
+
+	* Select New page, Create a new pagenext to the current page
+	* Click Next
+	* No page created, displays message "Please choose an option from below to proceed to the next step."

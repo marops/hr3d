@@ -1,0 +1,21 @@
+{% load i18n menu_tags cache %}
+
+{% for child in children %}
+    <li class="nav-item  {% if child.ancestor %}ancestor{% endif %}
+        {% if child.selected %} active{% endif %}
+        {% if child.children %} dropdown{% endif %}">
+        {% if child.children %}
+            <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">
+                {{ child.get_menu_title }}
+            </a>
+            <div class="dropdown-menu">
+                {% for c2 in child.children %}
+				<a class="dropdown-item" href="{{ c2.get_absolute_url }}"><span>{{ c2.get_menu_title }}</span></a>               
+                {% endfor %}
+            </div>
+        {% else %}
+            <a class="{% if child.children %} dropdown-item{% else %}  nav-link{% endif %}" href="{{ child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+        {% endif %}
+    </li>
+    {% if class and forloop.last and not forloop.parentloop %}{% endif %}
+{% endfor %}

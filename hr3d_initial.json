@@ -1,0 +1,652 @@
+[
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "engineers",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$UjPCLRblhlI8$t0GS5a0VkZ9FduYxTjdkCKrHJYLCmlHI41RGwT70+1U=",
+    "last_login": "2019-02-08T21:04:45.913Z",
+    "is_superuser": true,
+    "username": "todd",
+    "first_name": "",
+    "last_name": "",
+    "email": "murphyrt@leidos.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-02-06T17:03:53Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+},
+{
+  "model": "issues.category",
+  "pk": 1,
+  "fields": {
+    "name": "general"
+  }
+},
+{
+  "model": "issues.category",
+  "pk": 2,
+  "fields": {
+    "name": "LIDAR sensor"
+  }
+},
+{
+  "model": "issues.category",
+  "pk": 3,
+  "fields": {
+    "name": "EO sensor"
+  }
+},
+{
+  "model": "cms.usersettings",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "language": "en",
+    "clipboard": 1
+  }
+},
+{
+  "model": "cms.treenode",
+  "pk": 1,
+  "fields": {
+    "path": "0001",
+    "depth": 1,
+    "numchild": 0,
+    "parent": null,
+    "site": 1
+  }
+},
+{
+  "model": "cms.treenode",
+  "pk": 2,
+  "fields": {
+    "path": "0002",
+    "depth": 1,
+    "numchild": 0,
+    "parent": null,
+    "site": 1
+  }
+},
+{
+  "model": "cms.page",
+  "pk": 1,
+  "fields": {
+    "created_by": "todd",
+    "changed_by": "todd",
+    "creation_date": "2019-02-06T17:07:19.900Z",
+    "changed_date": "2019-02-06T17:07:20.016Z",
+    "publication_date": "2019-02-06T17:07:19.998Z",
+    "publication_end_date": null,
+    "in_navigation": true,
+    "soft_root": false,
+    "reverse_id": null,
+    "navigation_extenders": null,
+    "template": "INHERIT",
+    "login_required": false,
+    "limit_visibility_in_menu": null,
+    "is_home": true,
+    "application_urls": null,
+    "application_namespace": null,
+    "publisher_is_draft": true,
+    "publisher_public": 2,
+    "languages": "en",
+    "xframe_options": 0,
+    "is_page_type": false,
+    "node": 1,
+    "placeholders": [
+      2
+    ]
+  }
+},
+{
+  "model": "cms.page",
+  "pk": 2,
+  "fields": {
+    "created_by": "todd",
+    "changed_by": "todd",
+    "creation_date": "2019-02-06T17:07:19.999Z",
+    "changed_date": "2019-02-06T17:10:00.792Z",
+    "publication_date": "2019-02-06T17:07:19.998Z",
+    "publication_end_date": null,
+    "in_navigation": true,
+    "soft_root": false,
+    "reverse_id": null,
+    "navigation_extenders": null,
+    "template": "INHERIT",
+    "login_required": false,
+    "limit_visibility_in_menu": null,
+    "is_home": true,
+    "application_urls": null,
+    "application_namespace": null,
+    "publisher_is_draft": false,
+    "publisher_public": 1,
+    "languages": "en",
+    "xframe_options": 0,
+    "is_page_type": false,
+    "node": 1,
+    "placeholders": [
+      3
+    ]
+  }
+},
+{
+  "model": "cms.page",
+  "pk": 3,
+  "fields": {
+    "created_by": "todd",
+    "changed_by": "todd",
+    "creation_date": "2019-02-06T17:11:45.241Z",
+    "changed_date": "2019-02-06T17:12:14.290Z",
+    "publication_date": "2019-02-06T17:12:19.071Z",
+    "publication_end_date": null,
+    "in_navigation": true,
+    "soft_root": false,
+    "reverse_id": null,
+    "navigation_extenders": "IssuesMenu",
+    "template": "INHERIT",
+    "login_required": false,
+    "limit_visibility_in_menu": null,
+    "is_home": false,
+    "application_urls": "",
+    "application_namespace": null,
+    "publisher_is_draft": true,
+    "publisher_public": 4,
+    "languages": "en",
+    "xframe_options": 0,
+    "is_page_type": false,
+    "node": 2,
+    "placeholders": [
+      4
+    ]
+  }
+},
+{
+  "model": "cms.page",
+  "pk": 4,
+  "fields": {
+    "created_by": "todd",
+    "changed_by": "todd",
+    "creation_date": "2019-02-06T17:12:19.071Z",
+    "changed_date": "2019-02-06T17:12:19.071Z",
+    "publication_date": "2019-02-06T17:12:19.071Z",
+    "publication_end_date": null,
+    "in_navigation": true,
+    "soft_root": false,
+    "reverse_id": null,
+    "navigation_extenders": "IssuesMenu",
+    "template": "INHERIT",
+    "login_required": false,
+    "limit_visibility_in_menu": null,
+    "is_home": false,
+    "application_urls": "",
+    "application_namespace": null,
+    "publisher_is_draft": false,
+    "publisher_public": 3,
+    "languages": "en",
+    "xframe_options": 0,
+    "is_page_type": false,
+    "node": 2,
+    "placeholders": [
+      5
+    ]
+  }
+},
+{
+  "model": "cms.placeholder",
+  "pk": 1,
+  "fields": {
+    "slot": "clipboard",
+    "default_width": null
+  }
+},
+{
+  "model": "cms.placeholder",
+  "pk": 2,
+  "fields": {
+    "slot": "content",
+    "default_width": null
+  }
+},
+{
+  "model": "cms.placeholder",
+  "pk": 3,
+  "fields": {
+    "slot": "content",
+    "default_width": null
+  }
+},
+{
+  "model": "cms.placeholder",
+  "pk": 4,
+  "fields": {
+    "slot": "content",
+    "default_width": null
+  }
+},
+{
+  "model": "cms.placeholder",
+  "pk": 5,
+  "fields": {
+    "slot": "content",
+    "default_width": null
+  }
+},
+{
+  "model": "cms.cmsplugin",
+  "pk": 1,
+  "fields": {
+    "path": "0001",
+    "depth": 1,
+    "numchild": 0,
+    "placeholder": 2,
+    "parent": null,
+    "position": 0,
+    "language": "en",
+    "plugin_type": "TextPlugin",
+    "creation_date": "2019-02-06T17:07:39.411Z",
+    "changed_date": "2019-02-06T17:09:43.814Z"
+  }
+},
+{
+  "model": "cms.cmsplugin",
+  "pk": 2,
+  "fields": {
+    "path": "0002",
+    "depth": 1,
+    "numchild": 0,
+    "placeholder": 3,
+    "parent": null,
+    "position": 0,
+    "language": "en",
+    "plugin_type": "TextPlugin",
+    "creation_date": "2019-02-06T17:07:39.411Z",
+    "changed_date": "2019-02-06T17:10:00.822Z"
+  }
+},
+{
+  "model": "cms.title",
+  "pk": 1,
+  "fields": {
+    "language": "en",
+    "title": "Home",
+    "page_title": "",
+    "menu_title": "",
+    "meta_description": "",
+    "slug": "home",
+    "path": "",
+    "has_url_overwrite": false,
+    "redirect": null,
+    "page": 1,
+    "creation_date": "2019-02-06T17:07:19.901Z",
+    "published": true,
+    "publisher_is_draft": true,
+    "publisher_public": 2,
+    "publisher_state": 0
+  }
+},
+{
+  "model": "cms.title",
+  "pk": 2,
+  "fields": {
+    "language": "en",
+    "title": "Home",
+    "page_title": "",
+    "menu_title": "",
+    "meta_description": "",
+    "slug": "home",
+    "path": "",
+    "has_url_overwrite": false,
+    "redirect": null,
+    "page": 2,
+    "creation_date": "2019-02-06T17:07:19.901Z",
+    "published": true,
+    "publisher_is_draft": false,
+    "publisher_public": 1,
+    "publisher_state": 0
+  }
+},
+{
+  "model": "cms.title",
+  "pk": 3,
+  "fields": {
+    "language": "en",
+    "title": "Issue Tracking",
+    "page_title": "",
+    "menu_title": "",
+    "meta_description": "",
+    "slug": "issues",
+    "path": "issues",
+    "has_url_overwrite": true,
+    "redirect": null,
+    "page": 3,
+    "creation_date": "2019-02-06T17:11:45.242Z",
+    "published": true,
+    "publisher_is_draft": true,
+    "publisher_public": 4,
+    "publisher_state": 0
+  }
+},
+{
+  "model": "cms.title",
+  "pk": 4,
+  "fields": {
+    "language": "en",
+    "title": "Issue Tracking",
+    "page_title": "",
+    "menu_title": "",
+    "meta_description": "",
+    "slug": "issues",
+    "path": "issues",
+    "has_url_overwrite": true,
+    "redirect": null,
+    "page": 4,
+    "creation_date": "2019-02-06T17:11:45.242Z",
+    "published": true,
+    "publisher_is_draft": false,
+    "publisher_public": 3,
+    "publisher_state": 0
+  }
+},
+{
+  "model": "cms.urlconfrevision",
+  "pk": 1,
+  "fields": {
+    "revision": "3b59a90f-7a49-4fa1-a189-24401f4f3ae7"
+  }
+},
+{
+  "model": "menus.cachekey",
+  "pk": 3,
+  "fields": {
+    "language": "en",
+    "site": 1,
+    "key": "cms_3.6.0_menu_nodes_en_1_1_user:public"
+  }
+},
+{
+  "model": "menus.cachekey",
+  "pk": 4,
+  "fields": {
+    "language": "en",
+    "site": 1,
+    "key": "cms_3.6.0_menu_nodes_en_1:public"
+  }
+},
+{
+  "model": "menus.cachekey",
+  "pk": 5,
+  "fields": {
+    "language": "en",
+    "site": 1,
+    "key": "cms_3.6.0_menu_nodes_en_1_1_user:draft"
+  }
+},
+{
+  "model": "djangocms_text_ckeditor.text",
+  "pk": 1,
+  "fields": {
+    "body": "<p>This a test site for the Issue Tracking Application. <a href=\"\">Login</a> with the <strong>engineer</strong> account. It can:</p>\n\n<h4>1. Create a New Issue</h4>\n\n<div>\n<ul>\n\t<li>Select <a href=\"\"><b>Issue Tracker | New Issue </b></a>from Menu</li>\n\t<li>After Issue is created and saved .\n\t<ul>\n\t\t<li>Email notification sent to Submitted_By and Selected Users (ex. Engineers).</li>\n\t\t<li>You will be able to add responses to it.</li>\n\t</ul>\n\t</li>\n</ul>\n</div>\n\n<div>\n<h4>2. View a List of Isues</h4>\n\n<ul>\n\t<li>List of Issues. Will have the ability to filter on\n\t<ul>\n\t\t<li>Your Issues (ie. Assigned to you)</li>\n\t\t<li>All Open Issues</li>\n\t\t<li>Un-assgined Issues</li>\n\t\t<li>Completed Issues</li>\n\t</ul>\n\t</li>\n\t<li>Sort by Columns</li>\n\t<li>Select <a href=\"\"><b>Issues Tracker | Issues List </b></a>from Menu</li>\n\t<li>Select the issue to view. This will open an Issue detail view and list all responses to the issue.</li>\n</ul>\n</div>\n\n<div>\n<h4>3. View the Details of an Issue and Be Able to View and Submit Responses</h4>\n\n<ul>\n\t<li>This will open an Issue detail view and list all responses to the issue.</li>\n\t<li>Click on the Reponse headers to expand it for details. Attachments submitted as part of a response will be listed.</li>\n\t<li>To enter a <b>New Response</b> click the New Response button.\n\t<ul>\n\t\t<li>Enter text and add any attachments.</li>\n\t\t<li>When Response is submitted, it will email notification to the Submitted_By and Assigned_To Users. Further Notification list TBD</li>\n\t</ul>\n\t</li>\n\t<li>When resolved, enter resolution and mark issue completed.</li>\n</ul>\n</div>\n\n<div>\n<h4>4. View a Dashboard</h4>\n\n<ul>\n\t<li><a href=\"\">A summary of Issues</a></li>\n\t<li>Others TBD.</li>\n</ul>\n</div>\n\n<p>\u00a0</p>\n\n<p>\"</p>"
+  }
+},
+{
+  "model": "djangocms_text_ckeditor.text",
+  "pk": 2,
+  "fields": {
+    "body": "<p>This a test site for the Issue Tracking Application. <a href=\"\">Login</a> with the <strong>engineer</strong> account. It can:</p>\n\n<h4>1. Create a New Issue</h4>\n\n<div>\n<ul>\n\t<li>Select <a href=\"\"><b>Issue Tracker | New Issue </b></a>from Menu</li>\n\t<li>After Issue is created and saved .\n\t<ul>\n\t\t<li>Email notification sent to Submitted_By and Selected Users (ex. Engineers).</li>\n\t\t<li>You will be able to add responses to it.</li>\n\t</ul>\n\t</li>\n</ul>\n</div>\n\n<div>\n<h4>2. View a List of Isues</h4>\n\n<ul>\n\t<li>List of Issues. Will have the ability to filter on\n\t<ul>\n\t\t<li>Your Issues (ie. Assigned to you)</li>\n\t\t<li>All Open Issues</li>\n\t\t<li>Un-assgined Issues</li>\n\t\t<li>Completed Issues</li>\n\t</ul>\n\t</li>\n\t<li>Sort by Columns</li>\n\t<li>Select <a href=\"\"><b>Issues Tracker | Issues List </b></a>from Menu</li>\n\t<li>Select the issue to view. This will open an Issue detail view and list all responses to the issue.</li>\n</ul>\n</div>\n\n<div>\n<h4>3. View the Details of an Issue and Be Able to View and Submit Responses</h4>\n\n<ul>\n\t<li>This will open an Issue detail view and list all responses to the issue.</li>\n\t<li>Click on the Reponse headers to expand it for details. Attachments submitted as part of a response will be listed.</li>\n\t<li>To enter a <b>New Response</b> click the New Response button.\n\t<ul>\n\t\t<li>Enter text and add any attachments.</li>\n\t\t<li>When Response is submitted, it will email notification to the Submitted_By and Assigned_To Users. Further Notification list TBD</li>\n\t</ul>\n\t</li>\n\t<li>When resolved, enter resolution and mark issue completed.</li>\n</ul>\n</div>\n\n<div>\n<h4>4. View a Dashboard</h4>\n\n<ul>\n\t<li><a href=\"\">A summary of Issues</a></li>\n\t<li>Others TBD.</li>\n</ul>\n</div>\n\n<p>\u00a0</p>\n\n<p>\"</p>"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2019-02-06T17:07:20.018Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "1",
+    "object_repr": "Home",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2019-02-06T17:10:00.839Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "1",
+    "object_repr": "Home",
+    "action_flag": 2,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2019-02-06T17:11:45.255Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "Issue Tracking",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2019-02-06T17:12:14.292Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "Issue Tracking",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"overwrite_url\", \"navigation_extenders\", \"xframe_options\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2019-02-06T17:12:19.088Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "Issue Tracking",
+    "action_flag": 2,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2019-02-06T17:44:05.866Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "general",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2019-02-06T17:44:19.922Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "LIDAR sensor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2019-02-06T17:44:30.066Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "EO sensor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2019-02-07T14:48:42.680Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "general",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2019-02-07T14:48:48.216Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "LIDAR sensor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2019-02-07T14:48:51.999Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "LIDAR sensor",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2019-02-07T14:48:56.728Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "EO sensor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2019-02-07T23:42:09.239Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "1",
+    "object_repr": "engineers",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2019-02-07T23:42:57.233Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "todd",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2019-02-08T17:37:44.355Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "todd",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2019-02-08T17:39:43.614Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "todd",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2019-02-08T17:42:06.769Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "todd",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2019-02-08T17:43:44.846Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "todd",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"groups\"]}}]"
+  }
+}
+]
