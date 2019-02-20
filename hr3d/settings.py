@@ -182,4 +182,15 @@ THUMBNAIL_PROCESSORS = (
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+#EMAIL_FILE_PATH = '/tmp'
+
+#SMTP
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST: 'smtp.leidos.com'  #Leidos
+#EMAIL_HOST: 'localhost'  #Postfix
+
+
