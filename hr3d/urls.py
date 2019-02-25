@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
+from django.contrib.auth import forms as auth_forms
 
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('issues/', include('issues.urls')),
     path('admin/', admin.site.urls),
+    path('change_password',auth_views.PasswordChangeView.as_view(template_name='registration/password_change_form.html',form_class=auth_forms.AdminPasswordChangeForm, success_url='/accounts/password_change/done/')),
     path('', include('cms.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
