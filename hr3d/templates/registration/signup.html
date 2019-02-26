@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block content %}
+
+   <div class="alert alert-primary" style="font-size:.8em">
+     Please enter your Leidos Username and create a password for this site.
+    The HR3D Engineering website will eventually incorporate the Leidos Active Directory to support
+     Single Sign On (SSO).
+  </div>
+
+
+<style>
+    .signup {
+      max-width:300px;
+      margin: 0 auto
+    }
+</style>
+
+<div class="signup">
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit">Sign up</button>
+  </form>
+</div>
+
+{% endblock %}

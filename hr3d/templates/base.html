@@ -30,7 +30,9 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav mr-auto">
+                    {% if request.user.is_authenticated %}
                     {% show_menu 0 1 100 100 "menu.html" %}
+                    {% endif %}
                 </ul>
 
 
