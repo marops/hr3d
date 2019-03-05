@@ -1,0 +1,46 @@
+{% load i18n %}
+
+  <table class="table table-striped table-bordered table-sm" style="max-width:800px;margin: 0 auto">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>Size(Kb)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+{% for file in folder_files %}
+    <tr>
+    <td>
+    <a href="{{ file.url }}"
+        {% if instance.link_target %} target="{{ instance.link_target }}"{% endif %}
+        {{ instance.attributes_str }}>
+        {{ file }}
+
+    </a>
+    </td>
+
+    <td>
+        {% if instance.show_file_size %}
+            <span>{{ file.size|filesizeformat }}</span>
+        {% endif %}
+    </td>
+    </tr>
+    {% if not forloop.last %}<br>{% endif %}
+{% empty %}
+    <p>{% trans "No files were found in the specified folder." %}</p>
+{% endfor %}
+
+    </tbody>
+  </table>
+
+{% comment %}
+    # https://github.com/divio/django-filer/blob/master/filer/models/filemodels.py
+    {{ instance.folder_src }}
+    {{ instance.get_files }} or {{ folder_files }}
+    # Available variables:
+    {{ instance.template }}
+    {{ instance.link_target }}
+    {{ instance.show_file_size }}
+    {{ instance.attributes_str }}
+{% endcomment %}
