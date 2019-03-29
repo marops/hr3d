@@ -148,7 +148,7 @@ LANGUAGES = [
 
 TIME_ZONE = 'UTC'
 
-USE_I18N = True
+USE_I18N = False
 
 USE_L10N = True
 
@@ -194,3 +194,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #EMAIL_HOST: 'localhost'  #Postfix
 
 LOGIN_REDIRECT_URL='/'
+
+DJANGOCMS_FILE_TEMPLATES = [
+    ('hr3d','HR3D'),
+]
