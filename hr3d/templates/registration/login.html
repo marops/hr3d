@@ -23,16 +23,22 @@
     {% endif %}
 {% endif %}
 
+
   <h2>Login</h2>
+
+  <div class="card bg-light text-dark" style="margin-bottom:1em">
+    <div class="card-body">Login with your Leidos Username and Password</div>
+  </div>
+
   <form method="post" action="{% url 'login' %}">
       {% csrf_token %}
     <div class="form-group">
       <label for="user">Username:</label>
-      <input type="user" class="form-control" id="user" placeholder="Enter username" name="username">
+      <input type="user" class="form-control" id="user" placeholder="Enter Leidos username" name="username">
     </div>
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+      <input type="password" class="form-control" id="password" placeholder="Enter Leidos password" name="password">
     </div>
     <div class="form-group form-check">
       <label class="form-check-label" class="sr-only">
@@ -44,7 +50,7 @@
   </form>
 
     {# Assumes you setup the password_reset view in your URLconf #}
-    <br><p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+    {# <br><p><a href="{% url 'password_reset' %}">Lost password?</a></p> #}
 
 
 </div>

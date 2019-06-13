@@ -26,7 +26,7 @@ urlpatterns = [
     path('issues/', include('issues.urls')),
     path('sensors/',include('sensors.urls')),
     path('admin/', admin.site.urls),
-    path('change_password',auth_views.PasswordChangeView.as_view(template_name='registration/password_change_form.html',form_class=auth_forms.AdminPasswordChangeForm, success_url='/accounts/password_change/done/')),
+    #path('change_password',auth_views.PasswordChangeView.as_view(template_name='registration/password_change_form.html',form_class=auth_forms.AdminPasswordChangeForm, success_url='/accounts/password_change/done/')),
     path('signup/',views.signup, name='signup'),
     path('', include('cms.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

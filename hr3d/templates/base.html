@@ -45,8 +45,6 @@
                   Welcome {{user.get_username}}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/change_password">Change Password</a>
-                  <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="/accounts/logout?next={{request.path}}">Logout</a>
                 </div>
                 {% else %}
@@ -57,9 +55,6 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="/accounts/login?next={{request.path}}">Login</a>
-                  <a class="dropdown-item" href="/accounts/password_reset">Lost Password</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/signup">Register</a>
                 </div>
 
                 {% endif %}
