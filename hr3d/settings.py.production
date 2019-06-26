@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'issues.apps.IssuesConfig',
     'sensors.apps.SensorsConfig',
+    'support.apps.SupportConfig',
     'cms',
     'menus',
     'treebeard',

@@ -2,7 +2,10 @@
 
 *pycache*
 *issues*
+/sensors
+/support
 *venv*
 *.idea*
 /static
 /media
+/emails
