@@ -100,6 +100,19 @@
                 </div>
             </nav>
 
+            <div style="font-size:.75em;margin-left:-3em">
+                <ul>
+                    {% for an in request.current_page.get_ancestor_pages %}
+                    {% if not ance.is_home %}
+                    <a href="{{ an.get_absolute_url }}">{{an}}</a>
+                        {% if not forloop.last %}
+                            &raquo;
+                        {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+
             {% placeholder "content" %}
 
         </div>
