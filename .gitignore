@@ -4,6 +4,7 @@
 *issues*
 /sensors
 /support
+/documents
 *venv*
 *.idea*
 /static

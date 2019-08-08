@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'issues.apps.IssuesConfig',
     'sensors.apps.SensorsConfig',
     'support.apps.SupportConfig',
+    'documents.apps.DocumentsConfig',
     'cms',
     'menus',
     'treebeard',
@@ -59,6 +60,9 @@ INSTALLED_APPS = [
     'djangocms_style',
     'djangocms_column',
     'crispy_forms',
+    'taggit',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -104,10 +108,10 @@ WSGI_APPLICATION = 'hr3d.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default0': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
+    #'default0': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #},
 
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -170,6 +174,7 @@ SITE_ID = 1
 
 CMS_TEMPLATES = [
     #('base.html', 'Base template'),
+    ('kb_page1.html','Knowledge Base'),
     ('fullwidth.html', 'Full width template'),
 ]
 
@@ -239,3 +244,47 @@ AUTHENTICATION_BACKENDS = (
     'django_auth_ldap.backend.LDAPBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+
+### CKEDITOR ###
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+#CKEDITOR_IMAGE_BACKEND = "pillow"
+
+CKEDITOR_CONFIGS = {
+    'default1': {
+        #'toolbar': 'Full',
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Save', 'Preview', 'Print'],
+            ['Styles','Format','Font','FontSize','Bold', 'Italic', 'Underline','Strike','TextColor', 'BGColor', 'Undo'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter',
+             'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink','Anchor','Image','Table','HorizontalRule', 'SpecialChar'],
+            ['RemoveFormat', 'Source', 'Maximize']
+        ]
+    },
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', ]},
+            {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste']},
+            {'name': 'editing', 'items': ['Find', 'Replace']},
+            {'name': 'paragraph',
+             'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter',
+                     'JustifyRight', 'JustifyBlock', '-']},
+            {'name': 'links', 'items': ['Link', 'Unlink']},
+            {'name': 'insert', 'items': ['Image', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak']},
+            '/',
+            {'name': 'basicstyles',
+             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting',
+                     'RemoveFormat']},
+            {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
+            {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+            {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
+            {'name': 'about', 'items': ['About']}
+        ]
+
+    }
+
+}
+
