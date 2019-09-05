@@ -61,6 +61,8 @@ INSTALLED_APPS = [
     'djangocms_column',
     'crispy_forms',
     'taggit',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -106,6 +108,11 @@ WSGI_APPLICATION = 'hr3d.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
+    #'default0': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #},
+
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'hr3d',
@@ -162,17 +169,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'hr3d', 'static'),
-)
-
 SITE_ID = 1
 
 
 CMS_TEMPLATES = [
     #('base.html', 'Base template'),
-    ('fullwidth.html', 'Full width template'),
     ('kb_page1.html','Knowledge Base'),
+    ('fullwidth.html', 'Full width template'),
 ]
 
 THUMBNAIL_HIGH_RESOLUTION = True
@@ -243,5 +246,45 @@ AUTHENTICATION_BACKENDS = (
 )
 
 
-### Taggit ###
-TAGGIT_CASE_INSENSITIVE = True
+### CKEDITOR ###
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+#CKEDITOR_IMAGE_BACKEND = "pillow"
+
+CKEDITOR_CONFIGS = {
+    'default1': {
+        #'toolbar': 'Full',
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Save', 'Preview', 'Print'],
+            ['Styles','Format','Font','FontSize','Bold', 'Italic', 'Underline','Strike','TextColor', 'BGColor', 'Undo'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter',
+             'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink','Anchor','Image','Table','HorizontalRule', 'SpecialChar'],
+            ['RemoveFormat', 'Source', 'Maximize']
+        ]
+    },
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', ]},
+            {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste']},
+            {'name': 'editing', 'items': ['Find', 'Replace']},
+            {'name': 'paragraph',
+             'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter',
+                     'JustifyRight', 'JustifyBlock', '-']},
+            {'name': 'links', 'items': ['Link', 'Unlink']},
+            {'name': 'insert', 'items': ['Image', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak']},
+            '/',
+            {'name': 'basicstyles',
+             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting',
+                     'RemoveFormat']},
+            {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
+            {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+            {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
+            {'name': 'about', 'items': ['About']}
+        ]
+
+    }
+
+}
+
