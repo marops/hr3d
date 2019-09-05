@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'issues.apps.IssuesConfig',
     'sensors.apps.SensorsConfig',
     'support.apps.SupportConfig',
+    'documents.apps.DocumentsConfig',
     'cms',
     'menus',
     'treebeard',
@@ -59,6 +60,7 @@ INSTALLED_APPS = [
     'djangocms_style',
     'djangocms_column',
     'crispy_forms',
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -104,11 +106,6 @@ WSGI_APPLICATION = 'hr3d.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default0': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'hr3d',
@@ -244,3 +241,7 @@ AUTHENTICATION_BACKENDS = (
     #'django_auth_ldap.backend.LDAPBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+
+### Taggit ###
+TAGGIT_CASE_INSENSITIVE = True
